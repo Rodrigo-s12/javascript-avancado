@@ -1,18 +1,18 @@
 // função construtora  -> constroi objetos, cria e retorna
 // função factory -> fabrica objetos
-// função contrutura -> sempre inicia a função ocm letra MAIUSCULA.Sempre vai ter que usar a palavra (new)
+// função contrutura -> sempre inicia a função com letra MAIUSCULA.Sempre vai ter que usar a palavra (new)
 
 function Pessoa(nome, sobrenome) {
-    // atributos ou metodos privdos, usados so aqui dentro
+    // atributos ou metodos privados, usados so aqui dentro
     const ID = 1232434
     const metodo = function() {}
     
-    // atributos oumétodos publicos
+    // atributos ou métodos publicos
     this.nome = nome
     this.sobrenome = sobrenome
 
     this.metodo = function() {
-        console.log(this.nome + ' : sou um método')
+        console.log(this.nome + ' ' + this.sobrenome)
     }
 }
 
