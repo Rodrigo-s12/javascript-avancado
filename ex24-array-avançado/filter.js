@@ -16,7 +16,7 @@ const pessoasIdade = pessoas.filter(valor => valor.idade > 50)
 const terminaComLetraA = pessoas.filter(valor => valor.nome.toLowerCase().endsWith('a')) // aqui eu transformei o nome em minusculo e depois peguei so os que termina com a letra A
 
 
-console.log(terminaComLetraA)
+console.log(pessoasIdade)
 
 
 
@@ -24,7 +24,7 @@ console.log(terminaComLetraA)
 
 
 
-// filter = sempre retotna um array, com a mesma quantidade de elementos ou menos.
+// filter = sempre retorna um array, com a mesma quantidade de elementos ou menos.
 //const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27]
 
 /*function callbackFilter(valor, indice, array) {  // so em usar o metodo filter a função ja vai usar esse tres parametros, valor = vai pegar cada valor do array, indice = vai pegar os indices dos valores, array = pode receber ou utilizar o valor ou array
