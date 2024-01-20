@@ -29,13 +29,14 @@ function ValidaCPF(cpfEnviado) {
 ValidaCPF.prototype.valida = function() { // função de validação
     if(typeof this.cpfLimpo === 'undefined') return false // se o cpf não for enviado retorne false
     if(this.cpfLimpo.length !== 11) return false// se não tiver 11 numeros retorne false
-    if(this.sequencia()) return false
+    if(this.sequencia()) return false // se der verdadeiro pra uma sequencia vai retornar false
 
     const cpfParcial = this.cpfLimpo.slice(0, -2) // aqui peguei o cpf com 9 digitos
-    const digito1 = this.criaDigito(cpfParcial) 
-    const digito2 = this.criaDigito(cpfParcial + digito1)
+    const digito1 = this.criaDigito(cpfParcial) // criei o primeiro digito depois dos 9
+    const digito2 = this.criaDigito(cpfParcial + digito1) // criei o segundo digito depois do 10.
     
-    const novoCpf = cpfParcial + digito1 + digito2
+    
+    const novoCpf = cpfParcial + digito1 + digito2 // to comparando com o cpf enviado para ver se ta valido, eu o concatenando os valores
     return novoCpf === this.cpfLimpo
 }
 
@@ -56,8 +57,8 @@ ValidaCPF.prototype.criaDigito = function(cpfParcial) {
 }   
 
 ValidaCPF.prototype.sequencia = function() {
-    const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length)
-    return sequencia === this.cpfLimpo
+    const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length) // to verificando se e uma sequencia o primeiro numero ate o ultimo
+    return sequencia === this.cpfLimpo // se for uma sequencia vai dar verdadeiro, e la no validador vai retornar false se for uma sequencia
 }
 const cpf = new ValidaCPF('611.338.863.88') 
 
