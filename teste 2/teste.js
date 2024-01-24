@@ -15,32 +15,35 @@ ValidaCPF.prototype.valida = function() {
     const cpfParcial = this.cpfLimpo.slice(0, -2)
     const digito1 = this.criaDigito(cpfParcial)
     const digito2 = this.criaDigito(cpfParcial + digito1)
-
-    const novoCpf = cpfParcial + digito1 + digito2
-    return novoCpf === this.cpfLimpo
+    
+    const cpfNovo = cpfParcial + digito1 + digito2
+    return cpfNovo === this.cpfLimpo
 }
 
-ValidaCPF.prototype.criaDigito = function(cpfParcial) {
-    const cpfArray = Array.from(cpfParcial)
+ValidaCPF.prototype.criaDigito = function(cpf) {
+    const cpfArray = Array.from(cpf)
     let regressivo = cpfArray.length + 1
     const total = cpfArray.reduce((ac, val) => {
         ac += (regressivo * Number(val))
-        console.log(ac)
         regressivo--
-        return ac
+        return ac         
+
     }, 0)
-   
+
     const digito = 11 - (total % 11)
-    console.log(digito)
-    return digito > 9 ? '0' : String(digito)
+    return digito > 9 ? '0': String(digito) 
+    
 }
 
 ValidaCPF.prototype.isSequencia = function() {
     const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length)
     return sequencia === this.cpfLimpo
+    
 }
 
-const cpf = new ValidaCPF('611.338.863.88')
+
+
+const cpf = new ValidaCPF('611.338.863.883')
 
 if(cpf.valida()) {
     console.log('cpf válido')
