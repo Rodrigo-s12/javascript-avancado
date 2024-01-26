@@ -38,7 +38,7 @@ CC.prototype.constructor = CC
 
 //sobreescrevendo o sacar, porque agora pode valor negativo por causa do limite
 CC.prototype.sacar = function(valor) { // no sacar eu preciso de um valor pra min saber quanto vou sacar
-    if(valor > (this.saldo + this.limite)) { //se o valor for mais que o saldo + limite, ele vai poder sacar ate o valor do limite, depois vai dar saldo insuficiente
+    if(valor > (this.saldo + this.limite)) { //se o valor for maior  que o saldo + limite, ele vai poder sacar ate o valor do limite, depois vai dar saldo insuficiente
         console.log(`Saldo insuficiente: ${this.saldo}`)
         return 
     }
