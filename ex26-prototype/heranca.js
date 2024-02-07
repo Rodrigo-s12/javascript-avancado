@@ -21,9 +21,9 @@ function Camiseta(nome,preco, cor) {
 
 
 Camiseta.prototype = Object.create(Produto.prototype) // aqui eu to pegando o prototype de produto
-Camiseta.prototype.constructor = Camiseta // to transformando o construtor do prototype, como eu setei o o prototype de produto para camiseta, o construtor ficou sendo o produto, mas tem que ser camiseta
+Camiseta.prototype.constructor = Camiseta // to transformando o construtor do prototype, como eu setei o prototype de produto para camiseta, o construtor ficou sendo o produto, mas tem que ser camiseta
 
-Camiseta.prototype.aumento = function(percentual) { // aqui eu sobreescrevendo o valor de aumento para camiseta, agora esta em porcentagem
+Camiseta.prototype.aumento = function(percentual) { // aqui eu to sobreescrevendo o valor de aumento para camiseta, agora esta em porcentagem
     this.preco = this.preco + (this.preco * (percentual / 100)) 
 }
 
