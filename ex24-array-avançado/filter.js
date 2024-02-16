@@ -16,7 +16,7 @@ const pessoasIdade = pessoas.filter(valor => valor.idade > 50)
 const terminaComLetraA = pessoas.filter(valor => valor.nome.toLowerCase().endsWith('a')) // aqui eu transformei o nome em minusculo e depois peguei so os que termina com a letra A
 
 
-console.log(pessoasIdade)
+console.log(terminaComLetraA)
 
 
 
