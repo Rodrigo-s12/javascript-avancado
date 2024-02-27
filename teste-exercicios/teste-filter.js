@@ -13,13 +13,12 @@ console.log()
 
 
 
-const alunos = [
-    {nome: 'Diogo', media: 5.5},
-    {nome: 'Julia', media: 9.5},
-    {nome: 'Roberto', media: 1.5},
-    {nome: 'Tiago', media: 6.0}
+const dimensoes = [
+    {altura: 10, comprimento: 20}, 
+    {altura: 2, comprimento: 4},
+    {altura: 1, comprimento: 1},
+    {altura: 50, comprimento: 50},
 ]
 
-const aprovados = alunos.filter(valor => valor.media >= 6.5)
 
-console.log(aprovados)
+

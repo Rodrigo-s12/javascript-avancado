@@ -30,5 +30,4 @@ const somar = dobrar.map(function(valor) {
     return valor * 2
 })
 //console.log(somar)
-const caps = ['oi', 'tudo', 'bem?']
 
