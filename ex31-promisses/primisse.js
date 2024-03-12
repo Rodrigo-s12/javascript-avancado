@@ -37,3 +37,5 @@ esperaAi('Conexão com o BD', rand(1, 3)).then((resposta) => {
  // todo resolve cai no then()
 
  // todo reject cai no cacth()
+
+ // é usado quando não temos certeza de  quando vai terminar
