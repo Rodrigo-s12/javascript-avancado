@@ -7,12 +7,14 @@ function rand(min, max) { // fiz uma função para pegar um número aleatorio em
 function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
         if(typeof msg !== 'string') reject('BAD VALUE')  // quando der um erro ele vai rejeitar
+        
         setTimeout(() => {
             resolve(msg)
         }, tempo)
     })    
 
-} 
+
+}   
 
 esperaAi('Conexão com o BD', rand(1, 3)).then((resposta) => {
     console.log(resposta)
@@ -32,7 +34,7 @@ esperaAi('Conexão com o BD', rand(1, 3)).then((resposta) => {
 })
  // sempre que chamar resolve o método then(), será executado, ele recebe uma função, dentro posso retornar outra promisse de dentro do then, para pegar o dado dessa promisse que eu fiz, eu preciso fazer outro then.
 
- // o reject e usando quando tem um erro vai direto para o catch
+ // o reject e usa do quando tem um erro vai direto para o catch
 
  // todo resolve cai no then()
 

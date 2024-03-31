@@ -1,6 +1,6 @@
 // XMLHttpRequest - pode fazer requisição de qualquer tipo de dados
 // vai buscar as paginas
-const request = obj => { 
+/*const request = obj => { 
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest() 
    xhr.open(obj.method, obj.url, true)// get = buscar algum conteudo da internet, requisição, o padrao do navegador, aqui eu peguei os parametros do abjeto, aqui so estamos usando get
@@ -18,7 +18,7 @@ const request = obj => {
    })
     })
    
-}
+}*/
 
 //pegar os clicks nos links, qualquer click
 document.addEventListener('click', e => {
@@ -33,9 +33,9 @@ document.addEventListener('click', e => {
 
 async function carregaPagina(el) {
     
-    try{
+    try {
         const href = el.getAttribute('href') // pegando o link que ta sendo clicado
-        const response = await fetch(href)
+        const response = await fetch(href) // por padrão retorna uma promisse
     
         if(response.status !== 200) throw new Error('ERROR 404!')
     
